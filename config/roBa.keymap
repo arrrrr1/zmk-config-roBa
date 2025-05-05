@@ -109,9 +109,9 @@
             label = "LEFT_PARENTHESES";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_PARENTHESIS>,
-                <&kp LEFT_BRACKET>,
-                <&kp LEFT_BRACE>;
+                <&kp JP_LPAR>,
+                <&kp JP_LBKT>,
+                <&kp JP_LBRC>;
         };
 
         right_parentheses: right_parentheses {
@@ -119,23 +119,26 @@
             label = "RIGHT_PARENTHESES";
             #binding-cells = <0>;
             bindings =
-                <&kp RIGHT_PARENTHESIS>,
-                <&kp RIGHT_BRACKET>,
-                <&kp RIGHT_BRACE>;
+                <&kp JP_RPAR>,
+                <&kp JP_RBKT>,
+                <&kp JP_RBRC>;
         };
 
         quote: quote {
             compatible = "zmk,behavior-tap-dance";
             label = "QUOTE";
             #binding-cells = <0>;
-            bindings = <&kp DOUBLE_QUOTES>, <&kp SINGLE_QUOTE>;
+            bindings = 
+            <&kp JP_DQT>,
+            <&kp JP_SQT>,
+            <&kp JP_GRAVE>;
         };
 
         colon: colon {
             compatible = "zmk,behavior-tap-dance";
             label = "COLON";
             #binding-cells = <0>;
-            bindings = <&kp COLON>, <&kp SEMI>;
+            bindings = <&kp JP_COLON>, <&kp JP_SEMI>;
         };
     };
 
@@ -145,9 +148,9 @@
         default_layer {
             bindings = <
 &kp Q             &kp W    &kp E         &kp R                      &kp T                                            &kp Y        &kp U    &lt 5 I    &kp O    &kp P
-&mt LEFT_SHIFT A  &kp S    &kp D         &kp F                      &kp G        &lt 6 LS(LG(S))      &kp RC(Z)      &kp H        &lt 4 J  &kp K      &kp L    &mt RSHIFT MINUS
-&mt LEFT_SHIFT Z  &kp X    &kp C         &kp V                      &kp B        &kp LG(TAB)          &kp RC(Y)      &kp N        &kp M    &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp TAB  &kp LEFT_WIN  &lt_to_layer_0 1 LEFT_ALT  &lt 2 SPACE  &mt LCTRL GRAVE      &kp BACKSPACE  &lt 3 ENTER                               &kp ESC
+&mt LEFT_SHIFT A  &kp S    &kp D         &kp F                      &kp G        &lt 6 LS(LG(S))      &kp RC(Z)      &kp H        &lt 4 J  &kp K      &kp L    &mt RSHIFT JP_MINUS
+&mt LEFT_SHIFT Z  &kp X    &kp C         &kp V                      &kp B        &kp LG(TAB)          &kp RC(Y)      &kp N        &kp M    &kp JP_COMMA  &kp JP_DOT  &mt RIGHT_SHIFT JP_SLASH
+&kp LCTRL         &kp TAB  &kp LEFT_WIN  &lt_to_layer_0 1 LEFT_ALT  &lt 2 SPACE  &mt LCTRL JP_ZKHK      &kp BACKSPACE  &lt 3 ENTER                               &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -164,9 +167,9 @@
 
         NUM {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH              &kp AMPERSAND       &kp PERCENT                             &kp ASTERISK     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS
-&colon           &quote       &left_parentheses     &right_parentheses  &kp TILDE       &trans      &kp RC(N1)  &kp SLASH        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS
-&kp LEFT_SHIFT   &kp CARET    &kp NON_US_BACKSLASH  &kp DOLLAR          &kp UNDERSCORE  &trans      &kp CARET   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL
+&kp JP_EXCL  &kp JP_AT  &kp JP_HASH              &kp JP_AMPS       &kp JP_PRCNT                             &kp JP_ASTRK     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp JP_PLUS
+&colon           &quote       &left_parentheses     &right_parentheses  &kp JP_TILDE       &trans      &kp RC(N1)  &kp JP_SLASH        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_MINUS
+&kp LEFT_SHIFT   &kp JP_CARET    &kp JP_YEN  &kp JP_DLLR          &kp JP_UNDER  &trans      &kp JP_CARET   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp JP_EQUAL
 &trans           &trans       &trans                &trans              &trans          &trans      &kp K_BACK  &kp ENTER                                                           &kp KP_NUMLOCK
             >;
         };
