@@ -108,7 +108,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LEFT_PARENTHESES";
             #binding-cells = <0>;
-
+            tapping-term-ms = <200>;
             bindings =
                 <&kp JP_LPAR>,
                 <&kp JP_LBKT>,
@@ -119,7 +119,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "RIGHT_PARENTHESES";
             #binding-cells = <0>;
-
+            tapping-term-ms = <200>;
             bindings =
                 <&kp JP_RPAR>,
                 <&kp JP_RBKT>,
@@ -130,7 +130,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "QUOTE";
             #binding-cells = <0>;
-
+            tapping-term-ms = <200>;
             bindings = 
             <&kp JP_DQT>,
             <&kp JP_SQT>,
@@ -141,7 +141,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "COLON";
             #binding-cells = <0>;
-
+            tapping-term-ms = <200>;
             bindings = <&kp JP_COLON>, <&kp JP_SEMI>;
         };
     };
@@ -171,10 +171,10 @@
 
         NUM {
             bindings = <
-&kp JP_EXCL    &kp JP_AT    &kp JP_HASH    &kp JP_AMPS    &kp JP_PRCNT                             &kp JP_ASTRK     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp JP_PLUS
-&kp JP_COLON   &kp JP_SEMI  &kp JP_LPAR     &kp JP_RPAP  &kp JP_TILDE       &trans      &kp RC(N1)  &kp JP_SLASH        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_MINUS
-&kp JP_DQT    &kp JP_SQT    &kp JP_LBKT    &kp JP_RBKT    &kp JP_UNDER  &trans      &kp JP_CARET   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp JP_EQUAL
-&kp JP_YEN    &kp JP_DLLR    &trans    &trans    &trans    &trans                                    &kp JP_LBRC  &kp JP_RBRC                 &kp KP_NUMLOCK
+&kp JP_EXCL  &kp JP_AT  &kp JP_HASH              &kp JP_AMPS       &kp JP_PRCNT                             &kp JP_ASTRK     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp JP_PLUS
+&kp JP_COLON           &kp JP_SEMI       &kp JP_LPAR     &kp JP_RPAR  &kp JP_TILDE       &trans      &kp RC(N1)  &kp JP_SLASH        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_MINUS
+&kp JP_DQT   &kp JP_SQT    &kp JP_LBKT  &kp JP_RBKT          &kp JP_UNDER  &trans      &kp JP_CARET   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp JP_EQUAL
+&kp JP_YEN           &kp JP_DLLR       &trans                &trans              &trans          &trans      &kp JP_LBRC  &kp JP_RBRC                                                           &kp KP_NUMLOCK
             >;
         };
 
