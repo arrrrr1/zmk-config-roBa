@@ -108,7 +108,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LEFT_PARENTHESES";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+
             bindings =
                 <&kp JP_LPAR>,
                 <&kp JP_LBKT>,
@@ -119,7 +119,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "RIGHT_PARENTHESES";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+
             bindings =
                 <&kp JP_RPAR>,
                 <&kp JP_RBKT>,
@@ -130,7 +130,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "QUOTE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+
             bindings = 
             <&kp JP_DQT>,
             <&kp JP_SQT>,
@@ -141,7 +141,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "COLON";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+
             bindings = <&kp JP_COLON>, <&kp JP_SEMI>;
         };
     };
